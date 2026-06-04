@@ -1,0 +1,34 @@
+# Third-party repos — tracked separately
+analysis/repos/*
+!analysis/repos/*.md
+
+# Runtime data (postgres, prometheus, loki, grafana volumes)
+data/
+
+# Node
+node_modules/
+dist/
+build/
+.cache/
+*.tsbuildinfo
+
+# WXT
+.output/
+.wxt/
+*.wxt-*
+
+# Env
+.env
+.env.local
+*.key
+*.pem
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/settings.json
+.idea/
+*.swp
+*.swo

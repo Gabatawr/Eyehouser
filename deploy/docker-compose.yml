@@ -1,0 +1,14 @@
+services:
+  log-server:
+    image: node:22-alpine
+    container_name: eyehouser-log-server
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./log-server.mjs:/app/log-server.mjs:ro
+      - ../data:/data
+    working_dir: /app
+    environment:
+      LOG_FILE: /data/capture-log.ndjson
+    command: ["node", "log-server.mjs"]
+    restart: unless-stopped
